@@ -1,4 +1,4 @@
-package com.in28minutes.springboot.web.controller;
+package com.neosunivesity.springboot.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
