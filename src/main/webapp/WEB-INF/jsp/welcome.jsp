@@ -5,7 +5,8 @@
 </head>
 
 <body>
-	Welcome ${name}!!
+<h1>Spring boot application</h1><br>
+	Welcome ${name}!! + ${password}
 </body>
 
 </html>
