@@ -6,7 +6,8 @@
 
 <body>
 <h1>Spring boot application</h1><br>
-	Welcome ${name}!! + ${password}
+	Welcome ${name}!! + ${password} <br>
+   <a href="/users" > click to see all users information</a>
 </body>
 
 </html>
