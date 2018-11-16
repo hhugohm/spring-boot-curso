@@ -35,20 +35,4 @@ public class UserController {
 
         return "userById";
     }
-    @ResponseStatus(value = HttpStatus.NOT_FOUND, reason = "User data wrong...") //Spring genera una vista en automatico
-    @ExceptionHandler({ UserException.class})
-    public void  userErrorHandling(HttpServletRequest req, Exception exception) {
-    }
-
-    @ExceptionHandler({ Exception.class})
-    public ModelAndView  genericError(HttpServletRequest req, Exception exception) {
-        System.out.println(exception.getClass().getSimpleName());
-        ModelAndView errorView = new ModelAndView();
-        errorView.addObject("exception", exception);
-        errorView.addObject("url", req.getRequestURL());
-        errorView.addObject("timestamp", new Date().toString());
-        errorView.addObject("status", 500);
-        errorView.setViewName("exceptions/genericError");
-        return errorView;
-    }
 }

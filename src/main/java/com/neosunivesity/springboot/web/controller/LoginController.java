@@ -1,5 +1,6 @@
 package com.neosunivesity.springboot.web.controller;
 
+import com.neosunivesity.springboot.web.exceptions.UserException;
 import com.neosunivesity.springboot.web.service.ValidationLogin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -27,8 +28,7 @@ public class LoginController {
 			model.put("password",password);
 			return "welcome";
 		}else{
-			model.put("messageErrorUser","Invalidad user information, please try again");
-			return "login";
+			throw new RuntimeException("Not valid blank user/pass!! please try again");
 		}
 
 	}
